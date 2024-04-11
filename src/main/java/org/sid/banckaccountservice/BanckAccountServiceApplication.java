@@ -1,6 +1,5 @@
 package org.sid.banckaccountservice;
 
-import com.fasterxml.jackson.databind.deser.DataFormatReaders;
 import org.sid.banckaccountservice.entities.BankAccount;
 import org.sid.banckaccountservice.enums.AccountType;
 import org.sid.banckaccountservice.repositories.BankAccountRepository;
@@ -22,7 +21,7 @@ public class BanckAccountServiceApplication {
 	@Bean
 	CommandLineRunner start(BankAccountRepository bankAccountRepository){
 		return args -> {
-			for (int i = 0; i < 10; i++) {
+			for (int i = 0; i < 5; i++) {
 				BankAccount bankAccount = BankAccount.builder()
 						.id(UUID.randomUUID().toString())
 						.type(Math.random() > 0.5 ? AccountType.CURRENT_ACCOUNT : AccountType.SAVING_ACCOUNT)

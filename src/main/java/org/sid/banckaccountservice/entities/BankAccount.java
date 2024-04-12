@@ -11,7 +11,11 @@ import org.springframework.stereotype.Component;
 import java.util.Date;
 
 @Entity
-@Getter @Setter @AllArgsConstructor @NoArgsConstructor @Builder
+@Getter
+@Setter
+@AllArgsConstructor
+@NoArgsConstructor
+@Builder
 @Component
 public class BankAccount {
     @Id
